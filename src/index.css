@@ -11,3 +11,87 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.trash0 {
+  color: saddlebrown;
+  border-style: solid;
+  border-color: saddlebrown;
+  border-width: 1px;
+  background-color: ghostwhite !important;
+}
+
+.trash3 {
+  color: royalblue;
+  border-style: solid;
+  border-color: royalblue;
+  border-width: 1px;
+  background-color: ghostwhite !important;
+}
+
+.trash2 {
+  color: forestgreen;
+  border-style: solid;
+  border-color: forestgreen;
+  border-width: 1px;
+  background-color: ghostwhite !important;
+}
+
+.trash1 {
+  color: slategray;
+  border-style: solid;
+  border-color: slategray;
+  border-width: 1px;
+  background-color: ghostwhite !important;
+}
+
+.trash4 {
+  color: #E8C100;
+  border-style: solid;
+  border-color: #E8C100;
+  border-width: 1px;
+  background-color: ghostwhite !important;
+}
+
+.trash-none {
+  color: darkslategray;
+  border-style: solid;
+  border-color: darkslategray;
+  border-width: 1px;
+  background-color: ghostwhite !important;
+}
+
+.trash0-badge {
+  background-color: saddlebrown !important;
+}
+
+.trash1-badge {
+  background-color: slategray !important;
+}
+
+.trash2-badge {
+  background-color: forestgreen !important;
+}
+
+.trash3-badge {
+  background-color: royalblue !important;
+}
+
+.trash4-badge {
+  background-color: #E8C100 !important;
+}
+
+.wrapper {
+  background-color: white !important;
+}
+
+.clean-turns, .street-turns {
+   color: #25415A;
+   border-style: solid;
+   border-color: #25415A;
+   border-width: 1px;
+   background-color: ghostwhite !important;
+ }
+
+.clean-turns-badge, .street-turns-badge {
+  background-color: #25415A !important;
+}

@@ -1,0 +1,64 @@
+{
+  "people": [
+    "Chiara",
+    "Francesca C.",
+    "Alessio",
+    "Francesca S.",
+    "Alessandro"
+  ],
+  "streetTurns": [
+    {
+      "street": "Via Trentino",
+      "day": 1,
+      "week": 3
+    },
+    {
+      "street": "Via Basilicata",
+      "day": 0,
+      "week": 0
+    },
+    {
+      "street": "Via Istria",
+      "day": 3,
+      "week": 1
+    },
+    {
+      "street": "Via Lombardia",
+      "day": 4,
+      "week": 1
+    }
+  ],
+  "trash": [
+    {
+      "trash": "Umido",
+      "initial": 0
+    },
+    {
+      "trash": "Secco",
+      "initial": 2
+    },
+    {
+      "trash": "Vetro e lattine",
+      "initial": 3
+    },
+    {
+      "trash": "Plastica",
+      "initial": 1
+    },
+    {
+      "trash": "Carta e cartone",
+      "initial": 4
+    }
+  ],
+  "trashTurns": [
+    1,
+    [
+      0,
+      2
+    ],
+    4,
+    0,
+    3,
+    0
+  ]
+}
