@@ -1,63 +1,19 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  monospace;
 }
 
-.trash0 {
-  color: saddlebrown;
-  border-style: solid;
-  border-color: saddlebrown;
-  border-width: 1px;
-  background-color: ghostwhite !important;
-}
-
-.trash3 {
-  color: royalblue;
-  border-style: solid;
-  border-color: royalblue;
-  border-width: 1px;
-  background-color: ghostwhite !important;
-}
-
-.trash2 {
-  color: forestgreen;
-  border-style: solid;
-  border-color: forestgreen;
-  border-width: 1px;
-  background-color: ghostwhite !important;
-}
-
-.trash1 {
-  color: slategray;
-  border-style: solid;
-  border-color: slategray;
-  border-width: 1px;
-  background-color: ghostwhite !important;
-}
-
-.trash4 {
-  color: #E8C100;
-  border-style: solid;
-  border-color: #E8C100;
-  border-width: 1px;
-  background-color: ghostwhite !important;
-}
-
-.trash-none {
-  color: darkslategray;
-  border-style: solid;
-  border-color: darkslategray;
-  border-width: 1px;
-  background-color: ghostwhite !important;
+.trash0, .trash3, .trash2, .trash1, .trash4, .trash-none, .clean-turns, .street-turns  {
+  background-color: #fbfbff !important;
 }
 
 .trash0-badge {
@@ -85,12 +41,8 @@ code {
 }
 
 .clean-turns, .street-turns {
-   color: #25415A;
-   border-style: solid;
-   border-color: #25415A;
-   border-width: 1px;
-   background-color: ghostwhite !important;
- }
+  color: #25415A;
+}
 
 .clean-turns-badge, .street-turns-badge {
   background-color: #25415A !important;

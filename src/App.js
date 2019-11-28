@@ -5,7 +5,6 @@ import CleanTurns from './Components/CleanTurns';
 import StreetTurns from "./Components/StreetTurns";
 import TrashTurns from "./Components/TrashTurns";
 
-let dateField = null; //campo di scelta data, inizializzato come null
 const cleanInitialDate = '2019-11-11'; //data di inizio elenco pulizie, coincide col turno della persona alla posizione 0
 const trashInitialDate  = '2019-11-01'; //data di inizio primo ciclo dei turni delle pulizie
 
