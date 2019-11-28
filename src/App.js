@@ -5,20 +5,11 @@ import CleanTurns from './Components/CleanTurns';
 import StreetTurns from "./Components/StreetTurns";
 import TrashTurns from "./Components/TrashTurns";
 
-import $ from 'jquery';
-
 let dateField = null; //campo di scelta data, inizializzato come null
 const cleanInitialDate = '2019-11-11'; //data di inizio elenco pulizie, coincide col turno della persona alla posizione 0
 const trashInitialDate  = '2019-11-01'; //data di inizio primo ciclo dei turni delle pulizie
 
 const curDate = new Date().toISOString().substr(0, 10);
-
-//inizializzazione del campo per la scelta della data
-function initializeDateField() {
-	if(dateField === null) {
-		dateField = $('input[type="date"]');
-	}
-}
 
 class App extends React.Component{
 	constructor(props) {
@@ -29,15 +20,9 @@ class App extends React.Component{
 			date: curDate
 		};
 	}
-	componentDidMount() {
-		//inizializzazione del campo di inserimento data
-		initializeDateField();
 
-		let component = this;
-
-		dateField.change(function (event) {
-			component.setState({date: event.target.value})
-		});
+	dateChanged(event) {
+		this.setState({date: event.target.value});
 	}
 
 	render() {
@@ -52,7 +37,7 @@ class App extends React.Component{
 								<p className="lead">Data: </p>
 							</div>
 							<div className="col-md-4">
-								<input type="date" defaultValue={this.state.date} min={curDate}/>
+								<input type="date" onChange={this.dateChanged.bind(this)} defaultValue={this.state.date} min={curDate}/>
 							</div>
 						</div>
 					</div>
