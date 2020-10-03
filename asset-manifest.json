@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Shifts/static/css/main.dda5870c.chunk.css",
+    "main.js": "/Shifts/static/js/main.445a9eac.chunk.js",
+    "main.js.map": "/Shifts/static/js/main.445a9eac.chunk.js.map",
+    "runtime-main.js": "/Shifts/static/js/runtime-main.ce294470.js",
+    "runtime-main.js.map": "/Shifts/static/js/runtime-main.ce294470.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "/Shifts/static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.4ae65207.chunk.js": "/Shifts/static/js/2.4ae65207.chunk.js",
+    "static/js/2.4ae65207.chunk.js.map": "/Shifts/static/js/2.4ae65207.chunk.js.map",
+    "index.html": "/Shifts/index.html",
+    "precache-manifest.b1a1bd9f11ca830b15f812d78b4be8d5.js": "/Shifts/precache-manifest.b1a1bd9f11ca830b15f812d78b4be8d5.js",
+    "service-worker.js": "/Shifts/service-worker.js",
+    "static/css/2.d9ad5f5c.chunk.css.map": "/Shifts/static/css/2.d9ad5f5c.chunk.css.map",
+    "static/css/main.dda5870c.chunk.css.map": "/Shifts/static/css/main.dda5870c.chunk.css.map",
+    "static/js/2.4ae65207.chunk.js.LICENSE.txt": "/Shifts/static/js/2.4ae65207.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ce294470.js",
+    "static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.4ae65207.chunk.js",
+    "static/css/main.dda5870c.chunk.css",
+    "static/js/main.445a9eac.chunk.js"
+  ]
+}
