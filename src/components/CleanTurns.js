@@ -12,7 +12,7 @@ const CleanTurns = ({ date, initialDate }) => {
 			selectedDate.setDate(selectedDate.getDate() - offset);
 		}
 
-		return ((selectedDate - new Date(initialDate)) / timeDivider) % 5;
+		return Math.floor(((selectedDate - new Date(initialDate)) / timeDivider) % 5);
 	}, [selectedDate, initialDate, timeDivider]);
 
 	const currentPerson = useMemo(() => data.people[currentPersonIndex], [currentPersonIndex]);
