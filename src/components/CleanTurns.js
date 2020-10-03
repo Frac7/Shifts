@@ -1,5 +1,5 @@
 import React from 'react';
-import data from '../data.json';
+import data from '../data/data.json';
 
 const monday = 1; //primo giorno della settimana, costante per evitare magic numbers
 const totalPeople = 5; //totale inquilini

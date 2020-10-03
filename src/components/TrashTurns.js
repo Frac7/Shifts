@@ -1,5 +1,5 @@
 import React from 'react';
-import data from '../data.json';
+import data from '../data/data.json';
 
 const timeDivider = 1000 * 60 * 60 * 24; //divisore, indica i giorni trascorsi da una certa data
 const totalTrash = 5; //totale turni spazzatura
