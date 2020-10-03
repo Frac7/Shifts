@@ -9,14 +9,14 @@ const TrashTurns = ({ date, initialDate: startingDate }) => {
 	const trashTurns = useMemo(() => data.trashTurns, []);
 
 	const selectedDate = useMemo(() => new Date(date), [date]);
+	const initialDate = useMemo(() => new Date(startingDate), [startingDate]);
+
 	const trashTurnIndex = useMemo(() => {
 		const dayOfTheWeek = selectedDate.getDay() - 1;
 		return dayOfTheWeek === -1 ? trashTurns.length - 1 : dayOfTheWeek;
 	}, [selectedDate, trashTurns]);
-
 	const turnObject = useMemo(() => trashTurns[trashTurnIndex], [trashTurns, trashTurnIndex]);
 
-	const initialDate = useMemo(() => new Date(startingDate), [startingDate]);
 	let daysInMonth = useMemo(() => new Date(selectedDate.getFullYear(),
 		selectedDate.getMonth() + 1, 0).getDate(), [selectedDate]);
 	const shift = useMemo(() =>
@@ -29,7 +29,7 @@ const TrashTurns = ({ date, initialDate: startingDate }) => {
 					<p className="lead">Turni della spazzatura: </p>
 				</div>
 				<div className="col-md-6">
-					{trashTurnIndex === 5 ?
+					{selectedDate.getDay() - 1 === 5 ?
 						<p className="lead"> - </p> :
 						(trashTurns[trashTurnIndex].length && trashTurns[trashTurnIndex].map((turn, i) => (
 							<div key={i} className="row justify-content-center align-items-center">
