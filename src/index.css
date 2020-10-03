@@ -12,7 +12,7 @@ code {
   monospace;
 }
 
-.trash0, .trash3, .trash2, .trash1, .trash4, .trash-none, .clean-turns, .street-turns  {
+.trash-turns, .clean-turns, .street-turns  {
   background-color: #fbfbff !important;
 }
 
