@@ -6,18 +6,19 @@ const StreetTurns = ({ date }) => {
 	const selectedDay = useMemo(() => selectedDate.getDay() - 1, [selectedDate]);
 
 	const streetTurns = useMemo(() => data.streetTurns, []);
-	const days = useMemo(() => streetTurns.map((el) => el.day), [streetTurns]);
-	const turnIndex = useMemo(() => days.indexOf(selectedDay), [days, selectedDay]);
+	const turnIndex = useMemo(() => {
+		const days = streetTurns.map((el) => el.day);
+		return days.indexOf(selectedDay);
+	}, [streetTurns, selectedDay]);
 
-	const monthInitialDay = useMemo(() =>
-		new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1).getDay() - 1,
-		[selectedDate]);
-	const firstChosenDay = useMemo(() => monthInitialDay > selectedDay ?
-		7 - monthInitialDay + selectedDay + 1 :
-		selectedDay - monthInitialDay + 1, [monthInitialDay, selectedDay]);
-	const numberOfTheMonth = useMemo(() =>
-		turnIndex !== -1 && firstChosenDay + (7 * streetTurns[turnIndex].week),
-		[firstChosenDay, streetTurns, turnIndex]);
+	const numberOfTheMonth = useMemo(() => {
+			const monthInitialDay = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1).getDay() - 1;
+			const firstChosenDay = monthInitialDay > selectedDay ?
+				7 - monthInitialDay + selectedDay + 1 :
+				selectedDay - monthInitialDay + 1;
+			return turnIndex !== -1 && firstChosenDay + (7 * streetTurns[turnIndex].week);
+		},
+		[selectedDate, selectedDay, streetTurns, turnIndex]);
 
 	return(
 		<div className="container jumbotron street-turns">

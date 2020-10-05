@@ -45,15 +45,23 @@ class App extends React.Component{
 						</div>
 					</div>
 				</div>
-				<div className="row justify-content-center align-items-center">
-					<TrashTurns date={this.state.date} initialDate={this.state.trashInitialDate}/>
-				</div>
-				<div className="row justify-content-center align-items-center">
-					<CleanTurns date={this.state.date} initialDate={this.state.cleanInitialDate}/>
-				</div>
-				<div className="row justify-content-center align-items-center">
-					<StreetTurns date={this.state.date}/>
-				</div>
+				{this.state.date === '' ? (
+					<div className="jumbotron col-12 wrapper" align="center">
+						<h1 className="display-6">Nessuna data selezionata</h1>
+					</div>
+				): (
+					<>
+						<div className="row justify-content-center align-items-center">
+							<TrashTurns date={this.state.date} initialDate={this.state.trashInitialDate}/>
+						</div>
+						<div className="row justify-content-center align-items-center">
+							<CleanTurns date={this.state.date} initialDate={this.state.cleanInitialDate}/>
+						</div>
+						<div className="row justify-content-center align-items-center">
+							<StreetTurns date={this.state.date}/>
+						</div>
+					</>
+				)}
 			</div>
 		)
 	}

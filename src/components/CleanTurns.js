@@ -4,8 +4,8 @@ import data from '../data';
 const CleanTurns = ({ date, initialDate }) => {
 	const selectedDate = useMemo(() => new Date(date), [date]);
 
-	const timeDivider = useMemo(() => 1000 * 60 * 60 * 24 * 7, []);
 	const currentPersonIndex = useMemo(() => {
+		const timeDivider = 1000 * 60 * 60 * 24 * 7;
 		const dayOfTheWeek = selectedDate.getDay();
 		if(dayOfTheWeek !== 1) {
 			const offset = dayOfTheWeek - 1;
@@ -13,7 +13,7 @@ const CleanTurns = ({ date, initialDate }) => {
 		}
 
 		return Math.floor(((selectedDate - new Date(initialDate)) / timeDivider) % 5);
-	}, [selectedDate, initialDate, timeDivider]);
+	}, [selectedDate, initialDate]);
 
 	const currentPerson = useMemo(() => data.people[currentPersonIndex], [currentPersonIndex]);
 
