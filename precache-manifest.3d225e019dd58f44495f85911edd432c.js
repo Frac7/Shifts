@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9b3d3804ab627306251da53af81447af",
+    "revision": "2fce1918cfec91e9d999c924cf28e6eb",
     "url": "/Shifts/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Shifts/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "a6a4a1be4a8c4b546318",
+    "revision": "32bb6175011cc1de1629",
     "url": "/Shifts/static/css/main.dda5870c.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Shifts/static/js/2.4ae65207.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a6a4a1be4a8c4b546318",
-    "url": "/Shifts/static/js/main.07f02b9e.chunk.js"
+    "revision": "32bb6175011cc1de1629",
+    "url": "/Shifts/static/js/main.085aa1d4.chunk.js"
   },
   {
     "revision": "7fd8495946620c2ced0a",
