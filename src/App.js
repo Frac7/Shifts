@@ -23,13 +23,13 @@ class App extends React.Component{
 			<div className="App container">
 				<div className="row justify-content-center align-items-center">
 					<div className="jumbotron col-12 wrapper" align="center">
-						<h1 className="display-4">Calendario Turni</h1>
+						<h1 className="display-4">Turni</h1>
 						<hr className="my-4"/>
 						<div className="row justify-content-center align-items-center align-content-center">
-							<div className="col-md-4 col-sm-auto">
+							<div className="col-auto">
 								<p className="lead">Data: </p>
 							</div>
-							<div className="col-md-4 col-sm-auto">
+							<div className="col-auto">
 								<input
 									type="date"
 									onChange={this.dateChanged.bind(this)}

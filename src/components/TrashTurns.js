@@ -30,30 +30,45 @@ const TrashTurns = ({ date }) => {
 	return (
 		<div className={'container jumbotron trash-turns'}>
 			<div className="row justify-content-center align-items-center align-content-center">
-				<div className="col-md-4 col-sm-auto">
+				<div className="col-12 text-center">
 					<p className="lead">Turni della spazzatura: </p>
 				</div>
-				<div className="col-md-6 col-sm-auto">
+				<>
 					{selectedDate.getDay() - 1 === 5 ?
-						<p className="lead"> - </p> :
-						(trashTurns[trashTurnIndex].length && trashTurns[trashTurnIndex].map((turn, i) => (
-							<div key={i} className="row justify-content-center align-items-center align-content-center">
-								<div className="col-md-10">
-									<p className="h3">{turns[turn].trash}:
-										<span className={'mx-2 badge badge-secondary trash' + turn + '-badge'}>
-											{people[Math.floor(turns[turn].initial + shift) % 5]}
-										</span>
-									</p>
+						<div className="col-auto">
+							<p className="lead"> - </p>
+						</div>:
+							(trashTurns[trashTurnIndex].length && trashTurns[trashTurnIndex].map((turn, i) => (
+							<div className="col-auto">
+								<div key={i} className="row justify-content-center align-items-center align-content-center">
+									<div className="col-auto">
+										<p className="h3">{turns[turn].trash}:</p>
+									</div>
+									<div className="col-auto">
+										<p className="h3">
+											<span className={'mx-2 badge badge-secondary trash' + turn + '-badge'}>
+												{people[Math.floor(turns[turn].initial + shift) % 5]}
+											</span>
+										</p>
+									</div>
 								</div>
-							</div>))) || (
-								<p className="h3">{turns[turnObject].trash}:
-									<span className={'mx-2 badge badge-secondary trash' + turnObject + '-badge'}>
-										{people[Math.floor(turns[turnObject].initial + shift) % 5]}
-									</span>
-								</p>
+							</div>
+							))) || (
+								<>
+									<div className="col-auto">
+										<p className="h3">{turns[turnObject].trash}:</p>
+									</div>
+									<div className="col-auto">
+										<p className="h3">
+											<span className={'mx-2 badge badge-secondary trash' + turnObject + '-badge'}>
+												{people[Math.floor(turns[turnObject].initial + shift) % 5]}
+											</span>
+										</p>
+									</div>
+								</>
 							)
 					}
-				</div>
+				</>
 			</div>
 		</div>
 	);

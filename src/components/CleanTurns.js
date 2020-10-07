@@ -22,11 +22,16 @@ const CleanTurns = ({ date }) => {
 	return (
 		<div className="container jumbotron clean-turns align-content-center">
 			<div className="row justify-content-center align-items-center align-content-center">
-				<div className="col-md-4 col-sm-auto">
+				<div className="col-12 text-center">
 					<p className="lead">Turno delle pulizie: </p>
 				</div>
-				<div className="col-md-6 col-sm-auto">
+				<div className="col-auto">
 					<p className="h3"><span className="badge badge-secondary clean-turns-badge">{currentPerson}</span></p>
+				</div>
+				<div className="col-12 text-center">
+					<p className="h3 my-3 text-center">
+						<b>Pulire la cucina, pulire l'andito, spolverare</b>
+					</p>
 				</div>
 			</div>
 		</div>

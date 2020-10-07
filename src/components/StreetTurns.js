@@ -23,10 +23,10 @@ const StreetTurns = ({ date }) => {
 	return (
 		<div className="container jumbotron street-turns">
 			<div className="row justify-content-center align-items-center align-content-center">
-				<div className="col-md-4 col-sm-auto">
+				<div className="col-12 text-center">
 					<p className="lead">Turno della lavastrada: </p>
 				</div>
-				<div className="col-md-6 col-sm-auto">
+				<div className="col-auto">
 					{turnIndex !== -1 && numberOfTheMonth === selectedDate.getDate() ?
 						<p className="h3">
 							<span className="badge badge-secondary street-turns-badge">{streetTurns[turnIndex].street}</span>
