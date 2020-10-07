@@ -6,7 +6,7 @@ class App extends React.Component{
 	constructor(props) {
 		super(props);
 
-		const cleanInitialDate = '2019-11-11';
+		const cleanInitialDate = '2020-10-04';
 		const trashInitialDate  = '2019-11-01';
 
 		const curDate = new Date().toISOString().substr(0, 10);
