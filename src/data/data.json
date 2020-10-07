@@ -31,23 +31,23 @@
   "trash": [
     {
       "trash": "Umido",
-      "initial": 0
-    },
-    {
-      "trash": "Secco",
       "initial": 2
     },
     {
-      "trash": "Vetro e lattine",
+      "trash": "Secco",
       "initial": 3
     },
     {
+      "trash": "Vetro e lattine",
+      "initial": 4
+    },
+    {
       "trash": "Plastica",
-      "initial": 1
+      "initial": 0
     },
     {
       "trash": "Carta e cartone",
-      "initial": 4
+      "initial": 1
     }
   ],
   "trashTurns": [

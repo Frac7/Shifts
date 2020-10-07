@@ -1,7 +1,9 @@
 import React, { useMemo } from 'react';
 import data from '../data';
 
-const CleanTurns = ({ date, initialDate }) => {
+const initialDate = '2020-10-04';
+
+const CleanTurns = ({ date }) => {
 	const selectedDate = useMemo(() => new Date(date), [date]);
 
 	const currentPersonIndex = useMemo(() => {
@@ -13,7 +15,7 @@ const CleanTurns = ({ date, initialDate }) => {
 		}
 
 		return Math.floor(((selectedDate - new Date(initialDate)) / timeDivider) % 5);
-	}, [selectedDate, initialDate]);
+	}, [selectedDate]);
 
 	const currentPerson = useMemo(() => data.people[currentPersonIndex], [currentPersonIndex]);
 

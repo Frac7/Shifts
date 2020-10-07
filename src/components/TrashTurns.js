@@ -1,7 +1,9 @@
 import React, { useMemo } from 'react';
 import data from '../data';
 
-const TrashTurns = ({ date, initialDate: startingDate }) => {
+const startingDate  = '2020-10-01';
+
+const TrashTurns = ({ date }) => {
 	const { turns, people, trashTurns } = useMemo(() => ({
 		turns: data.trash,
 		people: data.people,
@@ -23,7 +25,7 @@ const TrashTurns = ({ date, initialDate: startingDate }) => {
 		const initialDate = new Date(startingDate);
 
 		return Math.floor((selectedDate - initialDate) / (timeDivider * daysInMonth));
-	}, [startingDate, selectedDate]);
+	}, [selectedDate]);
 
 	return(
 		<div className={'container jumbotron trash-turns'}>

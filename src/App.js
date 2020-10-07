@@ -6,16 +6,11 @@ class App extends React.Component{
 	constructor(props) {
 		super(props);
 
-		const cleanInitialDate = '2020-10-04';
-		const trashInitialDate  = '2019-11-01';
-
 		const curDate = new Date().toISOString().substr(0, 10);
 
 		this.state = {
 			date: curDate,
 			curDate,
-			cleanInitialDate,
-			trashInitialDate
 		};
 	}
 
@@ -52,13 +47,13 @@ class App extends React.Component{
 				): (
 					<>
 						<div className="row justify-content-center align-items-center">
-							<TrashTurns date={this.state.date} initialDate={this.state.trashInitialDate}/>
+							<TrashTurns date={this.state.date} />
 						</div>
 						<div className="row justify-content-center align-items-center">
-							<CleanTurns date={this.state.date} initialDate={this.state.cleanInitialDate}/>
+							<CleanTurns date={this.state.date} />
 						</div>
 						<div className="row justify-content-center align-items-center">
-							<StreetTurns date={this.state.date}/>
+							<StreetTurns date={this.state.date} />
 						</div>
 					</>
 				)}
