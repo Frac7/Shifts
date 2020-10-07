@@ -19,13 +19,13 @@ const CleanTurns = ({ date }) => {
 
 	const currentPerson = useMemo(() => data.people[currentPersonIndex], [currentPersonIndex]);
 
-	return(
-		<div className="container jumbotron clean-turns">
-			<div className="row justify-content-center align-items-center">
-				<div className="col-md-4">
+	return (
+		<div className="container jumbotron clean-turns align-content-center">
+			<div className="row justify-content-center align-items-center align-content-center">
+				<div className="col-md-4 col-sm-auto">
 					<p className="lead">Turno delle pulizie: </p>
 				</div>
-				<div className="col-md-6">
+				<div className="col-md-6 col-sm-auto">
 					<p className="h3"><span className="badge badge-secondary clean-turns-badge">{currentPerson}</span></p>
 				</div>
 			</div>

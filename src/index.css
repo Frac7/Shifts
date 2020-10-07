@@ -12,6 +12,10 @@ code {
   monospace;
 }
 
+p {
+  margin-bottom: 0 !important;
+}
+
 .trash-turns, .clean-turns, .street-turns  {
   background-color: #fbfbff !important;
 }

@@ -27,17 +27,17 @@ const TrashTurns = ({ date }) => {
 		return Math.floor((selectedDate - initialDate) / (timeDivider * daysInMonth));
 	}, [selectedDate]);
 
-	return(
+	return (
 		<div className={'container jumbotron trash-turns'}>
-			<div className="row justify-content-center align-items-center">
-				<div className="col-md-4">
+			<div className="row justify-content-center align-items-center align-content-center">
+				<div className="col-md-4 col-sm-auto">
 					<p className="lead">Turni della spazzatura: </p>
 				</div>
-				<div className="col-md-6">
+				<div className="col-md-6 col-sm-auto">
 					{selectedDate.getDay() - 1 === 5 ?
 						<p className="lead"> - </p> :
 						(trashTurns[trashTurnIndex].length && trashTurns[trashTurnIndex].map((turn, i) => (
-							<div key={i} className="row justify-content-center align-items-center">
+							<div key={i} className="row justify-content-center align-items-center align-content-center">
 								<div className="col-md-10">
 									<p className="h3">{turns[turn].trash}:
 										<span className={'mx-2 badge badge-secondary trash' + turn + '-badge'}>
