@@ -39,8 +39,8 @@ const TrashTurns = ({ date }) => {
 							<p className="lead"> - </p>
 						</div>:
 							(trashTurns[trashTurnIndex].length && trashTurns[trashTurnIndex].map((turn, i) => (
-							<div className="col-auto">
-								<div key={i} className="row justify-content-center align-items-center align-content-center">
+							<div className="col-auto" key={i}>
+								<div className="row justify-content-center align-items-center align-content-center">
 									<div className="col-auto">
 										<p className="h3">{turns[turn].trash}:</p>
 									</div>
