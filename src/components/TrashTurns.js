@@ -28,7 +28,7 @@ const TrashTurns = ({ date }) => {
 	}, [selectedDate]);
 
 	return (
-		<div className={'container jumbotron trash-turns'}>
+		<div className="container jumbotron trash-turns">
 			<div className="row justify-content-center align-items-center align-content-center">
 				<div className="col-12 text-center">
 					<p className="lead">Turni della spazzatura: </p>
