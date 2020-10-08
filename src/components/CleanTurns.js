@@ -22,19 +22,19 @@ const CleanTurns = ({ date }) => {
 	}, [selectedDate, timeDivider]);
 
 	const currentPersonIndex = useMemo(() => Math.floor(((selectedDate - new Date(initialDate)) / timeDivider) % 5),
-		[selectedDate]);
+		[selectedDate, timeDivider]);
 
 	const greenBathroomIndex = useMemo(() => {
 		if (!Object.values(greenBathroom).includes(currentPersonIndex)) {
 			return greenBathroom[Math.floor((((selectedDate - new Date(initialDate)) / timeDivider) % 15))];
 		}
-	}, [greenBathroom, currentPersonIndex, selectedDate]);
+	}, [greenBathroom, timeDivider, currentPersonIndex, selectedDate]);
 
 	const blueBathroomIndex = useMemo(() => {
 		if (!Object.values(blueBathroom).includes(currentPersonIndex)) {
 			return blueBathroom[Math.floor((((selectedDate - new Date(initialDate)) / timeDivider) % 10))];
 		}
-	}, [blueBathroom, currentPersonIndex, selectedDate]);
+	}, [blueBathroom, timeDivider, currentPersonIndex, selectedDate]);
 
 	return (
 		<div className="container jumbotron clean-turns align-content-center">
