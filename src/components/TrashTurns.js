@@ -65,6 +65,11 @@ const TrashTurns = ({ date }) => {
 											</span>
 										</p>
 									</div>
+									{turnObject === 3 && (
+										<div className="col-12">
+											<p className="h3 my-3 text-center"><b>Conferire tra le 18/18:30</b></p>
+										</div>
+									)}
 								</>
 							)
 					}

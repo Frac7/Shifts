@@ -23,8 +23,8 @@ class App extends React.Component{
 			<div className="App container">
 				<div className="row justify-content-center align-items-center">
 					<div className="jumbotron col-12 wrapper" align="center">
-						<h1 className="display-4">Turni</h1>
-						<hr className="my-4"/>
+						<h1 className="h1">Turni</h1>
+						<hr />
 						<div className="row justify-content-center align-items-center align-content-center">
 							<div className="col-auto">
 								<p className="lead">Data: </p>
