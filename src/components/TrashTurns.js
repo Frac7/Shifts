@@ -19,12 +19,8 @@ const TrashTurns = ({ date }) => {
 	const turnObject = useMemo(() => trashTurns[trashTurnIndex], [trashTurns, trashTurnIndex]);
 
 	const shift = useMemo(() => {
-		const timeDivider = 1000 * 60 * 60 * 24;
-		const daysInMonth = new Date(selectedDate.getFullYear(),
-			selectedDate.getMonth() + 1, 0).getDate();
 		const initialDate = new Date(startingDate);
-
-		return Math.floor((selectedDate - initialDate) / (timeDivider * daysInMonth));
+		return (selectedDate.getMonth() - initialDate.getMonth()) + (12 * (selectedDate.getFullYear() - initialDate.getFullYear()));
 	}, [selectedDate]);
 
 	return (
