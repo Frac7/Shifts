@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Shifts/static/css/main.88c3f3bc.chunk.css",
-    "main.js": "/Shifts/static/js/main.8e95c0d6.chunk.js",
-    "main.js.map": "/Shifts/static/js/main.8e95c0d6.chunk.js.map",
+    "main.js": "/Shifts/static/js/main.d9de4bc2.chunk.js",
+    "main.js.map": "/Shifts/static/js/main.d9de4bc2.chunk.js.map",
     "runtime-main.js": "/Shifts/static/js/runtime-main.ce294470.js",
     "runtime-main.js.map": "/Shifts/static/js/runtime-main.ce294470.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/Shifts/static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.4ae65207.chunk.js": "/Shifts/static/js/2.4ae65207.chunk.js",
     "static/js/2.4ae65207.chunk.js.map": "/Shifts/static/js/2.4ae65207.chunk.js.map",
     "index.html": "/Shifts/index.html",
-    "precache-manifest.ef0b0e60ec83298ef68ad247baaf28a2.js": "/Shifts/precache-manifest.ef0b0e60ec83298ef68ad247baaf28a2.js",
+    "precache-manifest.a7f33a90acb6a0bdda971e36f27609af.js": "/Shifts/precache-manifest.a7f33a90acb6a0bdda971e36f27609af.js",
     "service-worker.js": "/Shifts/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/Shifts/static/css/2.d9ad5f5c.chunk.css.map",
     "static/css/main.88c3f3bc.chunk.css.map": "/Shifts/static/css/main.88c3f3bc.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.4ae65207.chunk.js",
     "static/css/main.88c3f3bc.chunk.css",
-    "static/js/main.8e95c0d6.chunk.js"
+    "static/js/main.d9de4bc2.chunk.js"
   ]
 }
