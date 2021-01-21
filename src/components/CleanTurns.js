@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React from 'react';
 import data from '../data';
 
 const initialDate = '2020-10-04';
@@ -6,35 +6,26 @@ const initialDate = '2020-10-04';
 const CleanTurns = ({ date }) => {
 	const {
 		greenBathroom,
-		blueBathroom,
 		people
-	} = useMemo(() => data, []);
+	} = data;
 
-	const timeDivider = useMemo(() => 1000 * 60 * 60 * 24 * 7, []);
+	const timeDivider = 1000 * 60 * 60 * 24 * 7;
 
-	const selectedDate = useMemo(() => new Date(date), [date]);
-	useEffect(() => {
-		const dayOfTheWeek = selectedDate.getDay();
-		if(dayOfTheWeek !== 1) {
-			const offset = dayOfTheWeek - 1;
-			selectedDate.setDate(selectedDate.getDate() - offset);
-		}
-	}, [selectedDate, timeDivider]);
+	const selectedDate = new Date(date);
+	
+	const dayOfTheWeek = selectedDate.getDay();
+	if(dayOfTheWeek !== 1) {
+		const offset = dayOfTheWeek - 1;
+		selectedDate.setDate(selectedDate.getDate() - offset);
+	}
 
-	const currentPersonIndex = useMemo(() => Math.floor(((selectedDate - new Date(initialDate)) / timeDivider) % 5),
-		[selectedDate, timeDivider]);
+	const currentPersonIndex = Math.floor(((selectedDate - new Date(initialDate)) / timeDivider) % 5);
 
-	const greenBathroomIndex = useMemo(() => {
-		if (!Object.values(greenBathroom).includes(currentPersonIndex)) {
-			return greenBathroom[Math.floor((((selectedDate - new Date(initialDate)) / timeDivider) % 15))];
-		}
-	}, [greenBathroom, timeDivider, currentPersonIndex, selectedDate]);
-
-	const blueBathroomIndex = useMemo(() => {
-		if (!Object.values(blueBathroom).includes(currentPersonIndex)) {
-			return blueBathroom[Math.floor((((selectedDate - new Date(initialDate)) / timeDivider) % 10))];
-		}
-	}, [blueBathroom, timeDivider, currentPersonIndex, selectedDate]);
+	let greenBathroomIndex = -1;
+	
+	if (!Object.values(greenBathroom).includes(currentPersonIndex)) {
+		greenBathroomIndex = greenBathroom[Math.floor((((selectedDate - new Date(initialDate)) / timeDivider) % 15))];
+	}
 
 	return (
 		<div className="container jumbotron clean-turns align-content-center">
@@ -51,7 +42,7 @@ const CleanTurns = ({ date }) => {
 					</p>
 				</div>
 			</div>
-			{!isNaN(greenBathroomIndex) && (
+			{greenBathroomIndex > 0 && (
 				<div className="row justify-content-center align-items-center align-content-center">
 				<div className="col-12 text-center">
 					<p className="lead">Pulizia bagno grande: </p>
@@ -64,20 +55,6 @@ const CleanTurns = ({ date }) => {
 					</p>
 				</div>
 			</div>
-			)}
-			{!isNaN(blueBathroomIndex) && (
-				<div className="row justify-content-center align-items-center align-content-center">
-					<div className="col-12 text-center">
-						<p className="lead">Pulizia bagno piccolo: </p>
-					</div>
-					<div className="col-auto">
-						<p className="h3">
-						<span className="badge badge-secondary clean-turns-badge">
-							{people[blueBathroomIndex]}
-						</span>
-						</p>
-					</div>
-				</div>
 			)}
 		</div>
 	);
