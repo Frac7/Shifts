@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import data from '../data';
 
 const initialDate = '2020-10-04';
@@ -12,13 +12,12 @@ const CleanTurns = ({ date }) => {
 	const timeDivider = 1000 * 60 * 60 * 24 * 7;
 
 	const selectedDate = new Date(date);
-	useEffect(() => {
-		const dayOfTheWeek = selectedDate.getDay();
-		if(dayOfTheWeek !== 1) {
-			const offset = dayOfTheWeek - 1;
-			selectedDate.setDate(selectedDate.getDate() - offset);
-		}
-	}, [selectedDate, timeDivider]);
+	
+	const dayOfTheWeek = selectedDate.getDay();
+	if(dayOfTheWeek !== 1) {
+		const offset = dayOfTheWeek - 1;
+		selectedDate.setDate(selectedDate.getDate() - offset);
+	}
 
 	const currentPersonIndex = Math.floor(((selectedDate - new Date(initialDate)) / timeDivider) % 5);
 
