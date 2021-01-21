@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import data from '../data';
 
 const StreetTurns = ({ date }) => {

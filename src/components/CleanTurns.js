@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect } from 'react';
 import data from '../data';
 
 const initialDate = '2020-10-04';
@@ -6,7 +6,6 @@ const initialDate = '2020-10-04';
 const CleanTurns = ({ date }) => {
 	const {
 		greenBathroom,
-		blueBathroom,
 		people
 	} = data;
 
