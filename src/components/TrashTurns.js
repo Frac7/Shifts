@@ -4,24 +4,20 @@ import data from '../data';
 const startingDate  = '2020-10-01';
 
 const TrashTurns = ({ date }) => {
-	const { turns, people, trashTurns } = useMemo(() => ({
+	const { turns, people, trashTurns } = {
 		turns: data.trash,
-		people: data.people,
-		trashTurns: data.trashTurns
-	}), []);
+		...data
+	};
 
-	const selectedDate = useMemo(() => new Date(date), [date]);
+	const selectedDate = new Date(date);
+	
+	const dayOfTheWeek = selectedDate.getDay() - 1;
+	const trashTurnIndex = dayOfTheWeek === -1 ? trashTurns.length - 1 : dayOfTheWeek;
 
-	const trashTurnIndex = useMemo(() => {
-		const dayOfTheWeek = selectedDate.getDay() - 1;
-		return dayOfTheWeek === -1 ? trashTurns.length - 1 : dayOfTheWeek;
-	}, [selectedDate, trashTurns]);
-	const turnObject = useMemo(() => trashTurns[trashTurnIndex], [trashTurns, trashTurnIndex]);
-
-	const shift = useMemo(() => {
-		const initialDate = new Date(startingDate);
-		return (selectedDate.getMonth() - initialDate.getMonth()) + (12 * (selectedDate.getFullYear() - initialDate.getFullYear()));
-	}, [selectedDate]);
+	const turnObject = trashTurns[trashTurnIndex];
+	
+	const initialDate = new Date(startingDate);
+	const shift = (selectedDate.getMonth() - initialDate.getMonth()) + (12 * (selectedDate.getFullYear() - initialDate.getFullYear()));
 
 	return (
 		<div className="container jumbotron trash-turns">

@@ -2,23 +2,17 @@ import React, { useMemo } from 'react';
 import data from '../data';
 
 const StreetTurns = ({ date }) => {
-	const selectedDate = useMemo(() => new Date(date), [date]);
-	const selectedDay = useMemo(() => selectedDate.getDay() - 1, [selectedDate]);
+	const selectedDate = new Date(date);
+	const selectedDay = selectedDate.getDay() - 1;
 
-	const streetTurns = useMemo(() => data.streetTurns, []);
-	const turnIndex = useMemo(() => {
-		const days = streetTurns.map((el) => el.day);
-		return days.indexOf(selectedDay);
-	}, [streetTurns, selectedDay]);
+	const { streetTurns } = data;
+	const turnIndex = streetTurns.map((el) => el.day).indexOf(selectedDay);
 
-	const numberOfTheMonth = useMemo(() => {
-			const monthInitialDay = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1).getDay() - 1;
-			const firstChosenDay = monthInitialDay > selectedDay ?
-				7 - monthInitialDay + selectedDay + 1 :
-				selectedDay - monthInitialDay + 1;
-			return turnIndex !== -1 && firstChosenDay + (7 * streetTurns[turnIndex].week);
-		},
-		[selectedDate, selectedDay, streetTurns, turnIndex]);
+	const monthInitialDay = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1).getDay() - 1;
+	const firstChosenDay = monthInitialDay > selectedDay ?
+		7 - monthInitialDay + selectedDay + 1 :
+		selectedDay - monthInitialDay + 1;
+	const numberOfTheMonth = turnIndex !== -1 && firstChosenDay + (7 * streetTurns[turnIndex].week);
 
 	return (
 		<div className="container jumbotron street-turns">
