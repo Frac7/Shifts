@@ -30,7 +30,7 @@ const TrashTurns = ({ date }) => {
 						<div className="col-auto">
 							<p className="lead"> - </p>
 						</div>:
-							(trashTurns[trashTurnIndex].length && trashTurns[trashTurnIndex].map((turn, i) => (
+							(trashTurns[trashTurnIndex].length > 0 && trashTurns[trashTurnIndex].map((turn, i) => (
 							<div className="col-auto" key={i}>
 								<div className="row justify-content-center align-items-center align-content-center">
 									<div className="col-auto">
