@@ -1,7 +1,7 @@
 import React from 'react';
 import data from '../data';
 
-const initialDate = '2020-10-04';
+const initialDate = '2020-10-11';
 
 const CleanTurns = ({ date }) => {
 	const {
